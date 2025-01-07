@@ -1,0 +1,133 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+.toggle-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
+}
+
+/* Animasi Fade-In dengan Smooth Effect */
+@keyframes fadeInSmooth {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animasi untuk gambar */
+@keyframes fadeInSmoothRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Kelas untuk elemen dengan animasi */
+.animate-fade-in {
+  animation: fadeInSmooth 1.5s ease-in-out;
+}
+
+.animate-fade-in-delay {
+  animation: fadeInSmooth 1.5s ease-in-out 0.5s;
+}
+
+.animate-fade-in-right {
+  animation: fadeInSmoothRight 1.5s ease-in-out;
+}
+
+.animate-fade-in-right-delay {
+  animation: fadeInSmoothRight 1.5s ease-in-out 0.5s;
+}
+
+/* .bg-white {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+/* .bg-white:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+} */
+
+/* Animasi saat elemen muncul */
+/* .bg-white {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+/* .bg-white:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+} */
+
+/* Animasi muncul */
+/* .bg-white.animate {
+  opacity: 0; 
+  transform: translateY(20px); 
+  animation: fadeInUp 0.8s ease forwards; 
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.bg-white {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+} */
+
+.card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

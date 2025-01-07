@@ -1,36 +1,94 @@
-/* body {
+body {
   font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  color: #000000;
+  margin: 0;
+  padding: 0;
   transition: background-color 0.3s, color 0.3s;
 }
 
+h1,
+p {
+  padding: 20px;
+}
+
+#theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  /* Posisi di bagian bawah */
+  right: 20px;
+  /* Posisi di bagian kanan */
+}
+
+#theme-button {
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-button:hover {
+  background-color: #ddd;
+}
+
+/* Default light mode styles */
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-mode #theme-button {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+/* Dark mode styles */
 body.dark-mode {
   background-color: #121212;
   color: #ffffff;
 }
-.toggle-button {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 10px;
-  border: none;
-  border-radius: 50%;
-  background-color: #007bff;
-  color: #ffffff;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
+
+body.dark-mode #theme-button {
+  background-color: #333;
+  color: #fff;
+}
+.modal-content {
+  background-color: #ffffff; /* Warna latar modal untuk light mode */
+  color: #000000; /* Warna teks modal untuk light mode */
+}
+body.dark-mode .modal-content {
+  background-color: #333333; /* Warna latar modal untuk dark mode */
+  color: #ffffff; /* Warna teks modal untuk dark mode */
 }
 
-.toggle-button:hover {
-  background-color: #0056b3;
-} */
+/* Tombol close dalam dark mode */
+body.dark-mode .btn-close {
+  filter: invert(1); /* Membuat tombol close lebih terlihat dalam dark mode */
+}
+
+/* Default light mode style */
+/* Default style for modal-trigger in light mode */
+.modal-trigger {
+  cursor: pointer;
+  color: #000; /* Warna teks untuk light mode */
+  transition: color 0.3s; /* Transisi warna */
+}
+
+/* Dark mode style for modal-trigger */
+body.dark-mode .modal-trigger {
+  color: #000; /* Warna teks untuk dark mode */
+}
+
+/* Modal content default style for light mode */
+
+/* Gaya tambahan untuk elemen saat berada di dark mode */
 
 /* Animasi Fade-In dengan Smooth Effect */
 @keyframes fadeInSmooth {

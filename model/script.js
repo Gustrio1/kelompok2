@@ -79,18 +79,21 @@ function cards(data) {
 }
 cards(data);
 
-const toggleButton = document.getElementById("mode-toggle");
-const toggleIcon = document.getElementById("toggle-icon");
+const themeButton = document.getElementById("theme-button");
+const body = document.body;
 
-toggleButton.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
+// Set default mode to light mode
+body.classList.add("light-mode");
 
-  // Ubah ikon sesuai mode
-  if (document.body.classList.contains("dark-mode")) {
-    toggleIcon.classList.remove("fa-moon");
-    toggleIcon.classList.add("fa-sun");
+// Toggle between light and dark mode on button click
+themeButton.addEventListener("click", () => {
+  if (body.classList.contains("light-mode")) {
+    body.classList.remove("light-mode");
+    body.classList.add("dark-mode");
+    themeButton.innerHTML = '<i class="fas fa-moon"></i>'; // Change icon to moon
   } else {
-    toggleIcon.classList.remove("fa-sun");
-    toggleIcon.classList.add("fa-moon");
+    body.classList.remove("dark-mode");
+    body.classList.add("light-mode");
+    themeButton.innerHTML = '<i class="fas fa-sun"></i>'; // Change icon to sun
   }
 });

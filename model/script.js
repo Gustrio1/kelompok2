@@ -78,3 +78,19 @@ function cards(data) {
   });
 }
 cards(data);
+
+const toggleButton = document.getElementById("mode-toggle");
+const toggleIcon = document.getElementById("toggle-icon");
+
+toggleButton.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  // Ubah ikon sesuai mode
+  if (document.body.classList.contains("dark-mode")) {
+    toggleIcon.classList.remove("fa-moon");
+    toggleIcon.classList.add("fa-sun");
+  } else {
+    toggleIcon.classList.remove("fa-sun");
+    toggleIcon.classList.add("fa-moon");
+  }
+});

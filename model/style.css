@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: Arial, sans-serif;
   background-color: #ffffff;
   color: #000000;
@@ -30,7 +30,7 @@ body.dark-mode {
 
 .toggle-button:hover {
   background-color: #0056b3;
-}
+} */
 
 /* Animasi Fade-In dengan Smooth Effect */
 @keyframes fadeInSmooth {
